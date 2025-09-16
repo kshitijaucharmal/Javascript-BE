@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script type="text/javascript" src="string_comp.js"></script>
+<link rel="stylesheet" href="style.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<div class="shape-box">
+    <div class="form-section">
+      <h1>🔤 String Functions Playground</h1>
+      <label for="string" class="area-label">Enter a String:</label>
+      <input type="text" id="string" placeholder="Type something...">
+      <button onclick="runAll()">Run Functions</button>
+    </div>
+
+  </div>
+
+  <div class="all">
+    <!-- Left Column -->
+    <div class="operation">
+      <h2>Not in Place Methods</h2>
+      <table id="notInPlaceTable">
+        <thead>
+          <tr>
+            <th>Operation</th>
+            <th>Argument</th>
+            <th>Output</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Index Of</td><td><input id="arg-indexof" class="arg-input" value="T"></td><td id="out-indexof"></td></tr>
+          <tr><td>Char At</td><td><input id="arg-charat" type="number" class="arg-input" value="5"></td><td id="out-charat"></td></tr>
+          <tr><td>Char Code At</td><td><input id="arg-charcodeat" type="number" class="arg-input" value="5"></td><td id="out-charcodeat"></td></tr>
+          <tr><td>Concat</td><td><input id="arg-concat" class="arg-input" value=" for cats"></td><td id="out-concat"></td></tr>
+          <tr><td>Pad Start</td><td><input id="arg-padstart" type="number" class="arg-input" value="10"></td><td id="out-padstart"></td></tr>
+          <tr><td>Pad End</td><td><input id="arg-padend" type="number" class="arg-input" value="10"></td><td id="out-padend"></td></tr>
+          <tr><td>Split</td><td><input id="arg-split" class="arg-input" value=" "></td><td id="out-split"></td></tr>
+          <tr><td>Slice</td>
+            <td>
+              <input id="arg-slice-start" type="number" class="arg-input" value="0">
+              <input id="arg-slice-end" type="number" class="arg-input" value="4">
+            </td>
+            <td id="out-slice"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Right Column -->
+    <div class="operation">
+      <h2>In Place Methods</h2>
+      <table id="inPlaceTable">
+        <thead>
+          <tr>
+            <th>Operation</th>
+            <th>Argument</th>
+            <th>Output</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Replace</td><td><input id="arg-replace1" class="arg-input" value="u"> → <input id="arg-replace2" class="arg-input" value="a"></td><td id="out-replace"></td></tr>
+          <tr><td>Replace All</td><td><input id="arg-replaceall1" class="arg-input" value="u"> → <input id="arg-replaceall2" class="arg-input" value="a"></td><td id="out-replaceall"></td></tr>
+          <tr><td>Splice</td>
+            <td>
+              Start:<input id="arg-splice-start" type="number" class="arg-input" value="0">
+              Delete:<input id="arg-splice-del" type="number" class="arg-input" value="4">
+              Insert:<input id="arg-splice-insert" class="arg-input" value="Javascript">
+            </td>
+            <td id="out-splice"></td>
+          </tr>
+          <tr><td>Trim</td><td>–</td><td id="out-trim"></td></tr>
+          <tr><td>Trim Start</td><td>–</td><td id="out-trimstart"></td></tr>
+          <tr><td>Trim End</td><td>–</td><td id="out-trimend"></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</body>

@@ -1,0 +1,64 @@
+<!-- <script type="text/javascript" src="test.js"></script> -->
+<script type="text/javascript" src="areas.js"></script>
+<link rel="stylesheet" href="style.css">
+
+
+    <body>
+
+    <h1> Areas of Different Shapes </h1>
+
+    <div class="shape-box">
+        <div class="form-section">
+            Radius: <input id="radiusOfCircle" placeholder=0 type="number"><br/>
+                <div class="button-row">
+                    <button onclick="circle_area()"> Calculate </button>
+                    <button id="ResetCircle" onclick="reset()"> Reset </button>
+                </div>
+        </div>
+        <!-- <canvas id="myCanvas" width="300" height="300" style="border:4px solid #000000; border-radius: 10px;"></canvas> -->
+        <div class="result-section">
+            <div class="area-label">Area</div>
+            <div class="area-box" id="AreaCircle">0</div>
+        </div>
+    </div>
+    <br/>
+
+    <div class="shape-box">
+        <div class="form-section">
+            Length: <input id="lengthOfRect" placeholder=0 type="number"><br/>
+            Breadth: <input id="breadthOfRect" placeholder=0 type="number"><br/>
+                <div class="button-row">
+            <button onclick="rect_area()"> Calculate </button>
+            <button id="ResetRect" onclick="reset()"> Reset </button>
+                </div>
+        </div>
+        <!-- <canvas id="myCanvas" width="300" height="300" style="border:4px solid #000000; border-radius: 10px;"></canvas> -->
+        <div class="result-section">
+            <div class="area-label">Area</div>
+            <div class="area-box" id="AreaRect">0</div>
+        </div>
+    </div>
+    <br/>
+
+    <div class="shape-box">
+        <div class="form-section">
+            Side A: <input id="sideA" placeholder=0 type="number"><br/>
+            Side B: <input id="sideB" placeholder=0 type="number"><br/>
+            Side C: <input id="sideC" placeholder=0 type="number"><br/>
+            <div class="button-row">
+                <button onclick="triangle_area()"> Calculate </button>
+                <button id="ResetTriangle" onclick="reset()"> Reset </button>
+            </div>
+        </div>
+        <!-- <canvas id="myCanvas" width="300" height="300" style="border:4px solid #000000; border-radius: 10px;"></canvas> -->
+        <div class="result-section">
+            <div class="area-label">Area</div>
+            <div class="area-box" id="AreaTriangle">0</div>
+        </div>
+    </div>
+
+    <br/>
+    </body>
+
+</html>
+

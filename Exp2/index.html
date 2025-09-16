@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Logic Sits here -->
+    <script src=tables.js></script>
+
+    <!-- Visuals Sit here -->
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Tables</title>
+</head>
+<body>
+    <h1 id="title">Multiplication Tables</h1>
+
+    <div class="row-format">
+        <div class="block">
+        <label id="label"> Enter number </label>
+                <input id="in_for" type="number"></input><br>
+        <button id="btn_for" onclick="table_with_for()"> Submit </button>
+        <div class="table">
+            <p id="table_for"></p>
+        </div>
+        </div>
+
+        <div class="block">
+            <label id="label"> Enter number </label>
+                <input id="in_while" type="number"></input><br>
+            <button id="btn_while" onclick="table_with_while()"> Submit </button>
+            <div class="table">
+                <p id="table_while"></p>
+            </div>
+        </div>
+
+        <div class="block">
+        <label id="label"> Enter number </label>
+                <input id="in_dowhile" type="number"></input><br>
+        <button id="btn_dowhile" onclick="table_with_dowhile()"> Submit </button>
+        <div class="table">
+            <p id="table_dowhile"></p>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
