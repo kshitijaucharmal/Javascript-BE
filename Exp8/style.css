@@ -1,18 +1,51 @@
+@font-face {
+  font-family: SoccerLeague;
+  src: url(fonts/SoccerLeague.ttf);
+}
+@font-face {
+  font-family: PixelDart;
+  src: url(fonts/PixelDart.ttf);
+}
+
+@font-face {
+  font-family: PixelBug;
+  src: url(fonts/PixelBug.otf);
+}
+:root {
+  --border_color: #04BFB5;
+}
+
+#p_hover {
+  min-width: 400px;
+  max-width: 400px;
+}
+
+
 body {
-    font-family: Geneva, Verdana, sans-serif;
-    /* background: linear-gradient(to right, #f3f4f6, #e0e7ff); */
-    margin: 0;
-    padding: 20px;
-    /* color: #333; */
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
-    text-align: left;
-    font-family:'Segoe UI';
-    color: #1f2937;
-    margin-bottom: 40px;
-    font-size: 2.5rem;
-    animation: fadeIn 0.5s ease;
+    align-items: center;
+    font-family: SoccerLeague;
+    text-align: center;
+    color: #042131;
+    font-size: 3rem;
+    animation: fadeIn 0.2s ease;
+    text-shadow:
+      -2px -2px 0 var(--border_color),
+      2px -2px 0 var(--border_color),
+      -2px 2px 0 var(--border_color),
+      2px 2px 0 var(--border_color),
+      -3px 0px 0 var(--border_color),
+      3px 0px 0 var(--border_color),
+      0px -3px 0 var(--border_color),
+      0px 3px 0 var(--border_color);
 }
 
 table {
