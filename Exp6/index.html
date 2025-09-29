@@ -1,55 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<script type="text/javascript" src="array_ops.js"></script>
-<link rel="stylesheet" href="style.css">
+  <head>
+    <script type="text/javascript" src="array_ops.js"></script>
+    <link rel="stylesheet" href="style.css" />
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Array Operations</h1>
 
-  <div class="shape-box">
-    <!-- Input Section -->
-    <div class="form-section">
-      <label class="area-label">Enter Array Elements (comma-separated):</label>
-      <input type="text" id="arrayInput" placeholder="e.g. 10, 20, 30, 40">
-      <button onclick="createArray()">Create Array</button>
+    <div class="shape-box">
+      <!-- Input Section -->
+      <div class="form-section">
+        <label for="arraySize">Enter size of array:</label>
+        <input type="number" id="arraySize" min="1" placeholder="e.g. 3" />
+        <button onclick="createArray()">Create Array</button>
+        <div id="arrayInputs"></div>
+        <button id="saveArrayBtn" style="display: none" onclick="saveArray()">
+          Save Array
+        </button>
+        <div class="operation">
+          <label class="area-label">Remove Element:</label>
+          <input
+            type="text"
+            id="removeInput"
+            placeholder="Enter index to remove"
+          />
+          <button onclick="removeElement()">Remove</button>
+        </div>
 
-      <div class="operation">
-        <label class="area-label">Remove Element:</label>
-        <input type="text" id="removeInput" placeholder="Enter value to remove">
-        <button onclick="removeElement()">Remove</button>
+        <div class="operation">
+          <label class="area-label">Check Element:</label>
+          <input
+            type="text"
+            id="checkInput"
+            placeholder="Enter value to check"
+          />
+          <button onclick="checkElement()">Check</button>
+        </div>
+
+        <button onclick="emptyArray()">Empty Array</button>
       </div>
 
-      <div class="operation">
-        <label class="area-label">Check Element:</label>
-        <input type="text" id="checkInput" placeholder="Enter value to check">
-        <button onclick="checkElement()">Check</button>
+      <!-- Result Section -->
+      <div class="result-section">
+        <div class="area-label">Current Array</div>
+        <div class="area-box" id="arrayDisplay">[]</div>
+        <div id="message" style="color: #1e40af; font-weight: 600"></div>
       </div>
-
-      <button onclick="emptyArray()">Empty Array</button>
     </div>
-
-    <!-- Result Section -->
-    <div class="result-section">
-      <div class="area-label">Current Array</div>
-      <div class="area-box" id="arrayDisplay">[]</div>
-      <div id="message" style="color:#1e40af; font-weight:600;"></div>
-    </div>
-  </div>
 
     <h1>Array Preview</h1>
-  <!-- Table Section -->
-  <table id="arrayTable" style="display:none;">
-    <thead>
-      <tr>
-        <th>Index</th>
-        <th>Value</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-  </table>
-</body>
+    <!-- Table Section -->
+    <table id="arrayTable" style="display: none">
+      <thead>
+        <tr>
+          <th>Index</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </body>
+</html>

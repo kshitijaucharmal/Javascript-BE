@@ -63,5 +63,13 @@ function appendObject() {
   userArray.push(val);
 
   document.getElementById("finalArray").innerText = JSON.stringify(userArray);
-  document.getElementById("isArrayCheck").innerText = Array.isArray(val) ? "Yes, it's an Array ✅" : "No, not an Array ❌";
+}
+
+function checkIfArray() {
+  let index = Number(document.getElementById("checkIndex").value);
+  document.getElementById("isArrayCheck").innerText = Array.isArray(
+    userArray[index],
+  )
+    ? "Yes, it's an Array ✅"
+    : "No, not an Array ❌";
 }

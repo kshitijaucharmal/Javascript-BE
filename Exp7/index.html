@@ -1,39 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<script type="text/javascript" src="array_objects.js"></script>
-<link rel="stylesheet" href="style.css">
+  <head>
+    <script type="text/javascript" src="array_objects.js"></script>
+    <link rel="stylesheet" href="style.css" />
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-  <h1>Concept of Arrays & Array Objects in JavaScript</h1>
+  </head>
+  <body>
+    <h1>Concept of Arrays & Array Objects in JavaScript</h1>
 
-  <div class="shape-box">
-    <div class="form-section">
-      <label for="arraySize">Enter size of array:</label>
-      <input type="number" id="arraySize" min="1" placeholder="e.g. 3">
-      <button onclick="createArray()">Create Array</button>
+    <div class="shape-box">
+      <div class="form-section">
+        <label for="arraySize">Enter size of array:</label>
+        <input type="number" id="arraySize" min="1" placeholder="e.g. 3" />
+        <button onclick="createArray()">Create Array</button>
 
-      <div id="arrayInputs"></div>
+        <div id="arrayInputs"></div>
 
-      <button id="saveArrayBtn" style="display:none;" onclick="saveArray()">Save Array</button>
+        <button id="saveArrayBtn" style="display: none" onclick="saveArray()">
+          Save Array
+        </button>
 
-      <hr>
+        <hr />
 
-      <label for="appendValue">Append a value (number, string, or array [e.g. [1,2]]):</label>
-      <input type="text" id="appendValue" placeholder="Enter value to append">
-      <button onclick="appendObject()">Append</button>
+        <label for="appendValue"
+          >Append a value (number, string, or array [e.g. [1,2]]):</label
+        >
+        <input
+          type="text"
+          id="appendValue"
+          placeholder="Enter value to append"
+        />
+        <button onclick="appendObject()">Append</button>
+
+        <label for="checkIndex">Enter index to check:</label>
+        <input type="number" id="checkIndex" placeholder="e.g. 0" />
+        <button onclick="checkIfArray()">Check if Array</button>
+      </div>
+
+      <div class="result-section">
+        <div class="area-label">Final Array:</div>
+        <div class="area-box" id="finalArray">[]</div>
+
+        <div class="area-label">Is Arrawy Check:</div>
+        <div class="area-box" id="isArrayCheck">-</div>
+      </div>
     </div>
-
-    <div class="result-section">
-      <div class="area-label">Final Array:</div>
-      <div class="area-box" id="finalArray">[]</div>
-
-      <div class="area-label">Appended Object Check:</div>
-      <div class="area-box" id="isArrayCheck">-</div>
-    </div>
-  </div>
-</body>
+  </body>
+</html>
