@@ -1,18 +1,30 @@
-let default_color = "#FFD952";
-let hover_color = "#DE6604";
+let default_color = "#FBB13C";
+let focus_color = "#4c9f70";
+let hover_color = "#8EA4D2";
 
 // Set to default
 document.body.style.backgroundColor = default_color;
 
-let name_label = document.getElementById("p_hover");
-console.log(name_label);
+let header_text = document.getElementById("p_hover");
 
-name_label.addEventListener("mouseover", function(event) {
+header_text.addEventListener("mouseover", function (event) {
   const curColour = document.body.style.backgroundColor;
   document.body.style.backgroundColor = hover_color;
 });
 
-name_label.addEventListener("mouseleave", function(event) {
+header_text.addEventListener("mouseleave", function (event) {
+  const curColour = document.body.style.backgroundColor;
+  document.body.style.backgroundColor = default_color;
+});
+
+let batch_select = document.getElementById("batch");
+
+batch_select.addEventListener("focus", function (event) {
+  const curColour = document.body.style.backgroundColor;
+  document.body.style.backgroundColor = focus_color;
+});
+
+batch_select.addEventListener("blur", function (event) {
   const curColour = document.body.style.backgroundColor;
   document.body.style.backgroundColor = default_color;
 });
