@@ -1,77 +1,85 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<script type="text/javascript" src="strings.js"></script>
-<link rel="stylesheet" href="style.css">
+  <head>
+    <script type="text/javascript" src="strings.js"></script>
+    <link rel="stylesheet" href="style.css" />
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-        <h1> String Manipulation</h1>
-    Enter string: <input id="string" type="text" value="Pune Institute of Computer Technology"> </input>
+  </head>
+  <body>
+    <h1>String Manipulation</h1>
 
-        <div class="all">
-            <div class="operation">
-    <h2> Reverse String </h2>
-    <button onclick="reverse()">Reverse</button>
+    <div class="all">
+      <!-- Reverse Section -->
+      <div class="operation">
+        <h2>Reverse String</h2>
+        Enter string:
+        <input id="string_rev" type="text" value="PICT Pune" />
+        <button onclick="reverse()">Reverse</button>
 
-    <table>
-            <thead>
-                <tr>
-                    <th> Original </th>
-                    <th> Modified </th>
-                </tr>
-            </thead>
+        <table>
+          <thead>
             <tr>
-                <th id='original_rev'>  </th>
-                <th id='reversed_rev'>  </th>
+              <th>Original</th>
+              <th>Modified</th>
             </tr>
-    </table>
-            </div>
+          </thead>
+          <tr>
+            <th id="original_rev"></th>
+            <th id="reversed_rev"></th>
+          </tr>
+        </table>
+      </div>
 
-    <div class="operation">
-    <h2> Replace part of String </h2>
-    <button onclick="replace()">Replace</button>
+      <!-- Replace Section -->
+      <div class="operation">
+        <h2>Replace Part of String</h2>
+        Enter string:
+        <input id="string_rep" type="text" value="PICT Pune" />
+        <br />
+        Char to replace: <input id="to_replace" /> With:
+        <input id="with_replace" />
+        <button onclick="replace()">Replace</button>
 
-    <table>
-            <thead>
-                <tr>
-                    <th> Original </th>
-                    <th> Modified </th>
-                </tr>
-            </thead>
+        <table>
+          <thead>
             <tr>
-                <th id='original_rep'>  </th>
-                <th id='replaced_rep'>  </th>
+              <th>Original</th>
+              <th>Modified</th>
             </tr>
-    </table>
-    Char to replace: <input id='to_replace'> </input>
-    <br/>
-    With: <input id='with_replace'> </input>
-    <br/>
+          </thead>
+          <tr>
+            <th id="original_rep"></th>
+            <th id="replaced_rep"></th>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Palindrome Section -->
+      <div class="operation">
+        <h2>Check if Palindrome</h2>
+        Enter string: <input id="string_pal" type="text" value="racecar" />
+        <button onclick="checkPalindrome()">Palindrome Check</button>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Original</th>
+              <th>Is Palindrome?</th>
+            </tr>
+          </thead>
+          <tr>
+            <th id="original_pal"></th>
+            <th id="palindrome"></th>
+          </tr>
+        </table>
+      </div>
     </div>
 
-            <div class="operation">
-    <h2> Check if Palindrome </h2>
-    <button onclick="checkPalindrome()">Palindrome Check</button>
-
-    <table>
-            <thead>
-                <tr>
-                    <th> Original </th>
-                    <th> Is Palindrome ? </th>
-                </tr>
-            </thead>
-            <tr>
-                <th id='original_pal'>  </th>
-                <th id='palindrome'>  </th>
-            </tr>
-    </table>
-            </div>
-
-        </div>
-
-        <button onclick="allFunctions()"> All Functions </button> (Check Console)
-</body>
+    Enter string:
+    <input id="string" type="text" value="PICT Pune" />
+    <button onclick="allFunctions()">All Functions (Check Console)</button>
+  </body>
+</html>
