@@ -17,8 +17,15 @@ function replace() {
 
   let ans = s.replace(a, b);
 
+  if (!s.includes(a)) {
+    document.getElementById("rep_warning").innerHTML =
+      "No Character " + a + " found.";
+    return;
+  }
+
   document.getElementById("original_rep").innerHTML = s;
   document.getElementById("replaced_rep").innerHTML = ans;
+  document.getElementById("replaced_rep_all").innerHTML = s.replaceAll(a, b);
 }
 // palindrome (or not)
 function checkPalindrome() {

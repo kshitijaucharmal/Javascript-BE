@@ -1,12 +1,12 @@
-w; // For CSS
+// For CSS
 let ll = "lightline";
 let dl = "darkline";
 
 function table_with_for() {
   let n = Number(document.getElementById("in_for").value);
 
-  if (!Number.isInteger(n) || n < 0) {
-    alert("Invalid input! Please enter a non-negative integer.");
+  if (n == 0) {
+    alert("Invalid input! Please enter a number other than 0.");
     return;
   }
 
@@ -23,8 +23,8 @@ function table_with_for() {
 function table_with_while() {
   let n = Number(document.getElementById("in_while").value);
 
-  if (!Number.isInteger(n) || n < 0) {
-    alert("Invalid input! Please enter a non-negative integer.");
+  if (n == 0) {
+    alert("Invalid input! Please enter a number other than 0.");
     return;
   }
 
@@ -43,8 +43,8 @@ function table_with_while() {
 function table_with_dowhile() {
   let n = Number(document.getElementById("in_dowhile").value);
 
-  if (!Number.isInteger(n) || n < 0) {
-    alert("Invalid input! Please enter a non-negative integer.");
+  if (n == 0) {
+    alert("Invalid input! Please enter a number other than 0.");
     return;
   }
 

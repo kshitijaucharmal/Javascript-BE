@@ -1,28 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<script type="text/javascript" src="timer.js"></script>
-<link rel="stylesheet" href="style.css">
+  <head>
+    <script type="text/javascript" src="timer.js"></script>
+    <link rel="stylesheet" href="style.css" />
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Countdown Timer</h1>
 
-  <div class="shape-box">
-    <!-- Input Section -->
-    <div class="form-section">
-      <label class="area-label" for="endtime">Set End Date & Time:</label>
-      <input type="datetime-local" id="endtime">
-      <button onclick="startCountdown()">Start Timer</button>
-    </div>
+    <div class="shape-box">
+      <!-- Input Section -->
+      <div class="form-section">
+        <label class="area-label" for="endtime">Set End Date & Time:</label>
+        <input type="datetime-local" id="endtime" />
+        <button onclick="startCountdown()">Start Timer</button>
+      </div>
 
-    <!-- Output Section -->
-    <div class="result-section">
-      <div class="area-label">Time Left:</div>
-      <div id="timer" class="area-box">--d --h --m --s</div>
+      <!-- Output Section -->
+      <div class="result-section">
+        <div class="area-label">Time Left:</div>
+        <div id="timer" class="area-box">--d --h --m --s</div>
+      </div>
     </div>
-  </div>
-</body>
+  </body>
+</html>

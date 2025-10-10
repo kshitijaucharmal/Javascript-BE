@@ -17,7 +17,7 @@ function rect_area() {
     // Alert
     return null;
 
-  let area = (length * breadth);
+  let area = length * breadth;
   // Debug
   console.log(area);
 
@@ -36,7 +36,9 @@ function triangle_area() {
   console.log(val);
 
   if (val < 0) {
-    alert("Not a triangle !!");
+    document.getElementById("triangle-warning").innerHTML =
+      "Please Enter valid values, this triangle is invalid \n These sides do not form a triangle";
+    document.getElementById("AreaTriangle").innerHTML = "-";
     return;
   }
   var area = Math.sqrt(val);
@@ -48,17 +50,17 @@ function triangle_area() {
 function reset() {
   var id = "";
   switch (event.target.id) {
-  case "ResetCircle":
-    id = "AreaCircle"
-    break;
-  case "ResetRect":
-    id = "AreaRect"
-    break;
-  case "ResetTriangle":
-    id = "AreaTriangle"
-    break;
-  default:
-    alert("Nope");
+    case "ResetCircle":
+      id = "AreaCircle";
+      break;
+    case "ResetRect":
+      id = "AreaRect";
+      break;
+    case "ResetTriangle":
+      id = "AreaTriangle";
+      break;
+    default:
+      alert("Nope");
   }
 
   document.getElementById(id).innerHTML = "-";

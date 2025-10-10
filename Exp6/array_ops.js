@@ -78,9 +78,11 @@ function removeElement() {
   const index = value;
   if (index !== -1) {
     arr.splice(index, 1);
-    updateDisplay(`🗑️ Removed index '${value}' from the array.`);
+    updateDisplay(
+      `🗑️ Removed '${arr[index]}' from index '${value}' from the array.`,
+    );
   } else {
-    updateDisplay(`❌ index '${value}' not found in the array.`);
+    updateDisplay(`❌ index '${value}' not valid.`);
   }
 }
 
@@ -97,7 +99,9 @@ function checkElement() {
     return;
   }
   if (arr.includes(rawValue) || arr.includes(numValue)) {
-    updateDisplay(`✅ '${rawValue}' is present in the array.`);
+    updateDisplay(
+      `✅ '${rawValue}' is present in the array at index '${arr.indexOf(numValue)}'`,
+    );
   } else {
     updateDisplay(`❌ '${rawValue}' is NOT in the array.`);
   }
