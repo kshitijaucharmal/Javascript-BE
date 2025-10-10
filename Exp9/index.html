@@ -1,115 +1,195 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Student Information Form</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
-    Student Information Form
+    <div id="main-container">
+      <h1>Student Information Form</h1>
 
-    <div id="form">
-
+      <!-- The main form wrapper with an ID for JS access -->
+      <form id="studentForm">
+        <!-- Name Fieldset (Combined for 'Correct names' validation) -->
         <fieldset>
-        <legend> Name </legend>
-        <div class="name">
-            <label id="f_name"> First Name </label>
-            <input type="text" placeholder="First" required> </input>
-            <label id="m_name"> Middle Name </label>
-            <input type="text" placeholder="Middle" required> </input>
-            <label id="l_name"> Last Name </label>
-            <input type="text" placeholder="Last" required> </input>
-        </div>
+          <legend>Name</legend>
+          <div class="name-fields">
+            <label for="first_name"> First Name: </label>
+            <input
+              type="text"
+              id="first_name"
+              name="first_name"
+              placeholder="First"
+              required
+            />
+            <div class="error" id="firstNameError"></div>
+
+            <label for="middle_name"> Middle Name: </label>
+            <input
+              type="text"
+              id="middle_name"
+              name="middle_name"
+              placeholder="Middle"
+            />
+            <div class="error" id="middleNameError"></div>
+
+            <label for="last_name"> Last Name: </label>
+            <input
+              type="text"
+              id="last_name"
+              name="last_name"
+              placeholder="Last"
+              required
+            />
+            <div class="error" id="lastNameError"></div>
+          </div>
         </fieldset>
 
+        <!-- Address Fieldset -->
         <fieldset>
-        <legend> Address </legend>
-        <div class="address">
-            <label id="address1"> Address Line 1 </label>
-            <input type="text" placeholder="Address line 1" required> </input>
-            <br>
-            <label id="address2"> Address Line 2 </label>
-            <input type="text" placeholder="Address line 2"> </input>
-            <br>
-            <label id="address3"> Address Line 3 </label>
-            <input type="text" placeholder="Address line 3"> </input>
-            <br>
-            <label id="pincode"> Pincode </label>
-            <input type="number" required> </input>
-            <br>
+          <legend>Address</legend>
+          <div class="address-fields">
+            <div class="error" id="address1Error"></div>
+            <label for="address1_line"> Address Line 1: </label>
+            <input
+              type="text"
+              id="address1_line"
+              name="address1_line"
+              placeholder="Address line 1"
+              required
+            />
+                <br/>
 
-            <label id="state"> State </label>
-            <select id="states" name="states" required>
-                    <option>Select state</option>
-                    <option value="AN">Andaman and Nicobar Islands</option>
-                    <option value="AP">Andhra Pradesh</option>
-                    <option value="AR">Arunachal Pradesh</option>
-                    <option value="AS">Assam</option>
-                    <option value="BR">Bihar</option>
-                    <option value="CH">Chandigarh</option>
-                    <option value="CT">Chhattisgarh</option>
-                    <option value="DN">Dadra and Nagar Haveli</option>
-                    <option value="DD">Daman and Diu</option>
-                    <option value="DL">Delhi</option>
-                    <option value="GA">Goa</option>
-                    <option value="GJ">Gujarat</option>
-                    <option value="HR">Haryana</option>
-                    <option value="HP">Himachal Pradesh</option>
-                    <option value="JK">Jammu and Kashmir</option>
-                    <option value="JH">Jharkhand</option>
-                    <option value="KA">Karnataka</option>
-                    <option value="KL">Kerala</option>
-                    <option value="LA">Ladakh</option>
-                    <option value="LD">Lakshadweep</option>
-                    <option value="MP">Madhya Pradesh</option>
-                    <option value="MH">Maharashtra</option>
-                    <option value="MN">Manipur</option>
-                    <option value="ML">Meghalaya</option>
-                    <option value="MZ">Mizoram</option>
-                    <option value="NL">Nagaland</option>
-                    <option value="OR">Odisha</option>
-                    <option value="PY">Puducherry</option>
-                    <option value="PB">Punjab</option>
-                    <option value="RJ">Rajasthan</option>
-                    <option value="SK">Sikkim</option>
-                    <option value="TN">Tamil Nadu</option>
-                    <option value="TG">Telangana</option>
-                    <option value="TR">Tripura</option>
-                    <option value="UP">Uttar Pradesh</option>
-                    <option value="UT">Uttarakhand</option>
-                    <option value="WB">West Bengal</option>
-                </select>
-        </div>
+            <label for="address2_line"> Address Line 2: </label>
+            <input
+              type="text"
+              id="address2_line"
+              name="address2_line"
+              placeholder="Address line 2"
+            />
+                <br/>
+
+            <label for="address3_line"> Address Line 3: </label>
+            <input
+              type="text"
+              id="address3_line"
+              name="address3_line"
+              placeholder="Address line 3"
+            />
+                <br/>
+
+            <!-- Pincode -->
+            <label for="pincode"> Pincode: </label>
+            <!-- Changed type to text/tel and added maxlength -->
+            <input type="number" id="pincode" name="pincode" required />
+            <div class="error" id="pincodeError"></div>
+
+            <!-- City -->
+            <label for="city"> City: </label>
+            <input type="text" id="city" name="city" required />
+            <div class="error" id="cityError"></div>
+
+            <!-- State -->
+            <label for="state_select"> State: </label>
+            <select id="state_select" name="state_select" required>
+              <option value="">-- Select state --</option>
+              <option value="AN">Andaman and Nicobar Islands</option>
+              <option value="AP">Andhra Pradesh</option>
+              <option value="AR">Arunachal Pradesh</option>
+              <option value="AS">Assam</option>
+              <option value="BR">Bihar</option>
+              <option value="CH">Chandigarh</option>
+              <option value="CT">Chhattisgarh</option>
+              <option value="DN">Dadra and Nagar Haveli</option>
+              <option value="DD">Daman and Diu</option>
+              <option value="DL">Delhi</option>
+              <option value="GA">Goa</option>
+              <option value="GJ">Gujarat</option>
+              <option value="HR">Haryana</option>
+              <option value="HP">Himachal Pradesh</option>
+              <option value="JK">Jammu and Kashmir</option>
+              <option value="JH">Jharkhand</option>
+              <option value="KA">Karnataka</option>
+              <option value="KL">Kerala</option>
+              <option value="LA">Ladakh</option>
+              <option value="LD">Lakshadweep</option>
+              <option value="MP">Madhya Pradesh</option>
+              <option value="MH">Maharashtra</option>
+              <option value="MN">Manipur</option>
+              <option value="ML">Meghalaya</option>
+              <option value="MZ">Mizoram</option>
+              <option value="NL">Nagaland</option>
+              <option value="OR">Odisha</option>
+              <option value="PY">Puducherry</option>
+              <option value="PB">Punjab</option>
+              <option value="RJ">Rajasthan</option>
+              <option value="SK">Sikkim</option>
+              <option value="TN">Tamil Nadu</option>
+              <option value="TG">Telangana</option>
+              <option value="TR">Tripura</option>
+              <option value="UP">Uttar Pradesh</option>
+              <option value="UT">Uttarakhand</option>
+              <option value="WB">West Bengal</option>
+            </select>
+            <div class="error" id="stateError"></div>
+          </div>
         </fieldset>
 
+        <!-- Gender Fieldset -->
         <fieldset>
-          <legend> Gender </legend>
-
-          <div>
+          <legend>Gender</legend>
+          <div id="genderGroup">
             <input type="radio" id="male" name="gender" value="Male" checked />
-            <label for="male">Male</label>
-          </div>
+            <label for="male" class="radio-label">Male</label>
 
-          <div>
             <input type="radio" id="female" name="gender" value="Female" />
-            <label for="female">Female</label>
-          </div>
+            <label for="female" class="radio-label">Female</label>
 
-          <div>
             <input type="radio" id="others" name="gender" value="Others" />
-            <label for="others">Others</label>
+            <label for="others" class="radio-label">Others</label>
+            <div class="error" id="genderError"></div>
           </div>
         </fieldset>
 
-    <fieldset>
-    <legend> Contact </legend>
+        <!-- Contact Fieldset -->
+        <fieldset>
+          <legend>Contact</legend>
 
-    <label id="mobile"> Mobile Number </label>
-    <input type="number" required> </input>
-    <br>
-    <label id="email"> Email Id </label>
-    <input type="email" required> </input>
+          <!-- Mobile Number Update: +91 prefix added -->
+          <label for="mobile_number"> Mobile Number: </label>
+          <div class="mobile-input-group">
+            <span class="prefix">+91</span>
+            <input
+              type="tel"
+              id="mobile_number"
+              name="mobile_number"
+              required
+              maxlength="10"
+            />
+          </div>
+          <div class="error" id="mobileError"></div>
 
+          <!-- Email ID -->
+          <label for="email_id"> Email Id: </label>
+          <input type="email" id="email_id" name="email_id" required />
+          <div class="error" id="emailError"></div>
+        </fieldset>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit Information</button>
+      </form>
+
+      <!-- Welcome/Success Page (Hidden initially, content will be generated by JS) -->
+      <div id="welcome-section" class="welcome-section-style">
+        <!-- Content dynamically generated here --w>
+      </div>
     </div>
 
+    <!-- Link the JavaScript file here -->
+    <script src="script.js"></script>
   </body>
 </html>
